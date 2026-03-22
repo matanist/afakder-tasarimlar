@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFAKDER — Afet Arama Kurtarma Derneği</title>
+    <meta name="description" content="AFAKDER - Afet Arama Kurtarma Derneği. Bir el uzat, bir hayat kurtar. Bağışlarınla hayat kurtarıyoruz.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="heart-pulse">
+                <svg viewBox="0 0 64 64" width="64" height="64">
+                    <path d="M32 56 C32 56, 6 36, 6 20 C6 10, 14 4, 22 4 C27 4, 31 7, 32 10 C33 7, 37 4, 42 4 C50 4, 58 10, 58 20 C58 36, 32 56, 32 56Z" fill="#e07c5a"/>
+                </svg>
+            </div>
+            <p class="preloader-text">Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">
+                    <svg viewBox="0 0 40 40" width="40" height="40">
+                        <circle cx="20" cy="20" r="18" fill="#e07c5a" opacity="0.15"/>
+                        <path d="M20 32 C20 32, 8 24, 8 16 C8 11, 12 8, 16 8 C18 8, 19.5 9, 20 10.5 C20.5 9, 22 8, 24 8 C28 8, 32 11, 32 16 C32 24, 20 32, 20 32Z" fill="#e07c5a"/>
+                    </svg>
+                </span>
+                <div class="logo-text">
+                    <strong>AFAKDER</strong>
+                    <small>Afet Arama Kurtarma Derneği</small>
+                </div>
+            </a>
+
+            <div class="nav-emergency">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#e07c5a" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>Acil Yardım: <strong>112</strong></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hikayeler">Hikayeler</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#ne-yapiyoruz">Ne Yapıyoruz</a></li>
+                <li><a href="#guven">Güvenilirlik</a></li>
+                <li><a href="#gonullu">Gönüllü Ol</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li class="nav-cta-mobile"><a href="#bagis" class="btn btn-primary btn-nav">Bağış Yap</a></li>
+            </ul>
+
+            <a href="#bagis" class="btn btn-primary btn-nav nav-cta-desktop">Bağış Yap</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+            <div class="blob blob-5"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Her saniye bir hayat demek</p>
+                <h1 class="hero-title">
+                    Bir El Uzat,<br>
+                    <span class="highlight">Bir Hayat Kurtar</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Depremde, selde, yangında... En karanlık anlarında yanlarındaydık.
+                    Senin desteğinle daha çok insana ulaşabiliriz.
+                    <strong>Bu hikayenin parçası ol.</strong>
+                </p>
+                <div class="hero-actions">
+                    <a href="#bagis" class="btn btn-primary btn-lg">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        Bağış Yap
+                    </a>
+                    <a href="#hikayeler" class="btn btn-outline btn-lg">Hikayeleri Oku</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card" data-count="2847">
+                    <div class="stat-icon stat-icon-heart">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <span class="stat-number counter" data-target="2847">0</span>
+                    <span class="stat-label">Kurtarılan Can</span>
+                </div>
+                <div class="stat-card" data-count="1250">
+                    <div class="stat-icon stat-icon-hands">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <span class="stat-number counter" data-target="1250">0</span>
+                    <span class="stat-label">Aktif Gönüllü</span>
+                </div>
+                <div class="stat-card" data-count="34">
+                    <div class="stat-icon stat-icon-shield">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <span class="stat-number counter" data-target="34">0</span>
+                    <span class="stat-label">İl'de Faaliyet</span>
+                </div>
+            </div>
+        </div>
+        <div class="section-wave hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" fill="#fefcf9"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Hikayeler Section -->
+    <section class="section section-stories" id="hikayeler">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Gerçek Hikayeler</p>
+                <h2 class="section-title">Her Kurtarılan Can, <span class="highlight">Bir Hikaye</span></h2>
+                <p class="section-desc">Bu insanlar bugün hayatta, çünkü birileri umursamayı seçti. Senin gibi insanlar.</p>
+            </div>
+
+            <div class="stories-grid">
+                <!-- Story 1 -->
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-image-placeholder">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                        </div>
+                        <div class="story-badge">Kahramanmaraş 2023</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <svg class="quote-icon" viewBox="0 0 24 24" width="24" height="24" fill="#e07c5a" opacity="0.3"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                            <p>"Enkazın altında 18 saat geçirdim. Her şeyi kaybettiğimi düşünüyordum. Sonra o sesleri duydum — AFAKDER ekibi geliyordu. Enkazdan çıkarıldığımda ilk gördüğüm şey bir gönüllünün gülümseyen yüzüydü. O gülümseme bana hayatı geri verdi."</p>
+                        </div>
+                        <div class="story-person">
+                            <div class="story-avatar">A</div>
+                            <div>
+                                <strong>Ayşe K.</strong>
+                                <span>Kahramanmaraş, Şubat 2023</span>
+                            </div>
+                        </div>
+                        <a href="#" class="story-link">Tam Hikayeyi Oku &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-image-placeholder story-placeholder-2">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                        </div>
+                        <div class="story-badge">Kastamonu 2021</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <svg class="quote-icon" viewBox="0 0 24 24" width="24" height="24" fill="#e07c5a" opacity="0.3"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                            <p>"Sel her şeyimizi aldı — evimizi, eşyalarımızı, umutlarımızı. Ama AFAKDER gönüllüleri sadece bizi kurtarmadı, bize yeniden başlama gücü verdi. Kızım için minnet duyuyorum. O artık güvende."</p>
+                        </div>
+                        <div class="story-person">
+                            <div class="story-avatar story-avatar-2">M</div>
+                            <div>
+                                <strong>Mehmet Y.</strong>
+                                <span>Kastamonu, Ağustos 2021</span>
+                            </div>
+                        </div>
+                        <a href="#" class="story-link">Tam Hikayeyi Oku &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-image-placeholder story-placeholder-3">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                        </div>
+                        <div class="story-badge">İzmir 2020</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <svg class="quote-icon" viewBox="0 0 24 24" width="24" height="24" fill="#e07c5a" opacity="0.3"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                            <p>"6 yaşındaki oğlumu enkazdan 36 saat sonra çıkardılar. Doktorlar mucize dedi, ama ben biliyorum — o mucize AFAKDER ekibiydi. Her gün dua ediyorum onlar için."</p>
+                        </div>
+                        <div class="story-person">
+                            <div class="story-avatar story-avatar-3">F</div>
+                            <div>
+                                <strong>Fatma S.</strong>
+                                <span>İzmir, Ekim 2020</span>
+                            </div>
+                        </div>
+                        <a href="#" class="story-link">Tam Hikayeyi Oku &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stories-cta">
+                <p>Bu hikayeler gerçek. Ve senin desteğinle daha çok hikaye mutlu sonla bitebilir.</p>
+                <a href="#bagis" class="btn btn-primary btn-lg">Bir Hayat Değiştir</a>
+            </div>
+        </div>
+
+        <div class="section-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,40 C240,100 480,0 720,60 C960,120 1200,20 1440,80 L1440,120 L0,120 Z" fill="#f7f1eb"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Hakkımızda Section -->
+    <section class="section section-about" id="hakkimizda">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Biz Kimiz?</p>
+                <h2 class="section-title">Sıradan İnsanlar, <span class="highlight">Olağanüstü İşler</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">Biz, afet anında koşarak giden insanlarız. Herkes kaçarken biz enkaza doğru yürürüz. Neden mi? Çünkü o enkazın altında birinin annesi, birinin çocuğu, birinin sevdiği var.</p>
+                    <p>AFAKDER, 2015 yılında bir grup gönüllünün "daha fazlasını yapmalıyız" demesiyle kuruldu. O günden bu yana binlerce afetzede için umut olduk. Profesyonel eğitimli ekiplerimiz, 7/24 müdahaleye hazır.</p>
+                    <p>Ama bizi farklı kılan şey ekipmanlarımız değil — <strong>kalbimiz</strong>. Her operasyonda sadece canları kurtarmıyoruz, insanlara "yalnız değilsiniz" diyoruz.</p>
+
+                    <div class="about-values">
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <span>İnsan odaklı yaklaşım</span>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <span>Şeffaf ve hesap verebilir yönetim</span>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <span>Sürekli eğitim ve gelişim</span>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <span>Toplumsal dayanışma ve gönüllülük</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <p>Ekibimiz sahada</p>
+                    </div>
+                    <div class="about-floating-card">
+                        <strong>7/24</strong>
+                        <span>Müdahaleye Hazırız</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,80 C360,20 720,100 1080,40 C1260,10 1380,30 1440,60 L1440,120 L0,120 Z" fill="#fefcf9"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Ne Yapıyoruz Section -->
+    <section class="section section-services" id="ne-yapiyoruz">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Faaliyetlerimiz</p>
+                <h2 class="section-title">Hayat Kurtarmak İçin <span class="highlight">Ne Yapıyoruz?</span></h2>
+                <p class="section-desc">Her an hazırız. Her afette oradayız. Her ihtiyaçta yanınızdayız.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#e07c5a" stroke-width="2" stroke-linecap="round">
+                            <circle cx="24" cy="24" r="20" stroke-dasharray="4 4" opacity="0.3"/>
+                            <path d="M24 14v10M19 24h10" stroke-width="3"/>
+                            <path d="M14 34c2-4 6-6 10-6s8 2 10 6" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Arama Kurtarma</h3>
+                    <p>Deprem, çökme, toprak kayması gibi afetlerde profesyonel ekipmanlarla enkaz altından can kurtarma operasyonları yürütüyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#7a9e7e" stroke-width="2" stroke-linecap="round">
+                            <circle cx="24" cy="24" r="20" stroke-dasharray="4 4" opacity="0.3"/>
+                            <path d="M16 20l4 4 8-8" stroke-width="3"/>
+                            <rect x="14" y="28" width="20" height="8" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>Afet Eğitimi</h3>
+                    <p>Okullarda, iş yerlerinde ve mahallelerde deprem bilinci ve ilk yardım eğitimleri veriyoruz. Hazırlıklı toplum, güçlü toplum.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#d4943a" stroke-width="2" stroke-linecap="round">
+                            <circle cx="24" cy="24" r="20" stroke-dasharray="4 4" opacity="0.3"/>
+                            <path d="M24 12v6M24 30v6M12 24h6M30 24h6" stroke-width="3"/>
+                            <circle cx="24" cy="24" r="6"/>
+                        </svg>
+                    </div>
+                    <h3>Acil Yardım Dağıtımı</h3>
+                    <p>Afet bölgelerine sıcak yemek, battaniye, hijyen paketi ve temel ihtiyaç malzemeleri ulaştırıyoruz. İlk 72 saat kritik.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#e07c5a" stroke-width="2" stroke-linecap="round">
+                            <circle cx="24" cy="24" r="20" stroke-dasharray="4 4" opacity="0.3"/>
+                            <path d="M32 16c0-4-3.6-8-8-8s-8 4-8 8c0 8 8 16 8 16s8-8 8-16z" stroke-width="2"/>
+                            <circle cx="24" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Psikososyal Destek</h3>
+                    <p>Afet sonrası travma yaşayan bireylere ve ailelere uzman psikologlarımızla destek oluyoruz. Bedenler kadar ruhlar da iyileşmeli.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#7a9e7e" stroke-width="2" stroke-linecap="round">
+                            <circle cx="24" cy="24" r="20" stroke-dasharray="4 4" opacity="0.3"/>
+                            <path d="M16 32V20l8-6 8 6v12" stroke-width="2"/>
+                            <rect x="20" y="26" width="8" height="6" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3>Geçici Barınma</h3>
+                    <p>Evlerini kaybeden ailelere geçici barınak ve çadır kurulumu yapıyoruz. Bir çatı, bir umut demek.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#d4943a" stroke-width="2" stroke-linecap="round">
+                            <circle cx="24" cy="24" r="20" stroke-dasharray="4 4" opacity="0.3"/>
+                            <path d="M18 18h12v12H18z" stroke-width="2" rx="2"/>
+                            <path d="M22 22h4v4h-4z" fill="#d4943a" opacity="0.3"/>
+                            <path d="M24 14v4M24 30v4M14 24h4M30 24h4" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Gönüllü Koordinasyonu</h3>
+                    <p>Afet anında gönüllüleri organize ediyor, eğitiyor ve sahaya yönlendiriyoruz. Birlikte daha güçlüyüz.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C240,10 480,100 720,50 C960,0 1200,90 1440,40 L1440,120 L0,120 Z" fill="#f3ede6"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Güven Section -->
+    <section class="section section-trust" id="guven">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Neden Biz?</p>
+                <h2 class="section-title">Şeffaf ve <span class="highlight">Güvenilir</span></h2>
+                <p class="section-desc">Bize güvenmeniz için her şeyi açıkça paylaşıyoruz. Çünkü güven, kurtarma operasyonunun ilk adımıdır.</p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#7a9e7e" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <h4>AFAD Onaylı</h4>
+                        <p>T.C. AFAD tarafından resmi olarak tescil edilmiş arama kurtarma derneğiyiz.</p>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#e07c5a" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+                        </div>
+                        <h4>Bağımsız Denetim</h4>
+                        <p>Her yıl bağımsız mali denetimden geçiyor, raporları kamuoyuyla paylaşıyoruz.</p>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#d4943a" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h4>10 Yıllık Deneyim</h4>
+                        <p>2015'ten bu yana kesintisiz faaliyet. Yüzlerce operasyon, binlerce kurtarılan can.</p>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#7a9e7e" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h4>AKUT İş Birliği</h4>
+                        <p>Türkiye'nin köklü arama kurtarma kuruluşlarıyla ortak eğitim ve operasyon yapıyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="trust-finances">
+                    <h3>Bağışlarınız Nereye Gidiyor?</h3>
+                    <p class="trust-finance-desc">Son 1 yılda toplanan <strong>2.4 milyon TL</strong> bağışın dağılımı:</p>
+                    <div class="finance-bars">
+                        <div class="finance-bar-item">
+                            <div class="finance-bar-header">
+                                <span>Arama Kurtarma Operasyonları</span>
+                                <span class="finance-percent">42%</span>
+                            </div>
+                            <div class="finance-bar">
+                                <div class="finance-bar-fill" data-width="42" style="background: #e07c5a;"></div>
+                            </div>
+                        </div>
+                        <div class="finance-bar-item">
+                            <div class="finance-bar-header">
+                                <span>Acil Yardım Malzemesi</span>
+                                <span class="finance-percent">28%</span>
+                            </div>
+                            <div class="finance-bar">
+                                <div class="finance-bar-fill" data-width="28" style="background: #7a9e7e;"></div>
+                            </div>
+                        </div>
+                        <div class="finance-bar-item">
+                            <div class="finance-bar-header">
+                                <span>Eğitim ve Tatbikat</span>
+                                <span class="finance-percent">18%</span>
+                            </div>
+                            <div class="finance-bar">
+                                <div class="finance-bar-fill" data-width="18" style="background: #d4943a;"></div>
+                            </div>
+                        </div>
+                        <div class="finance-bar-item">
+                            <div class="finance-bar-header">
+                                <span>İdari Giderler</span>
+                                <span class="finance-percent">8%</span>
+                            </div>
+                            <div class="finance-bar">
+                                <div class="finance-bar-fill" data-width="8" style="background: #b8a090;"></div>
+                            </div>
+                        </div>
+                        <div class="finance-bar-item">
+                            <div class="finance-bar-header">
+                                <span>Psikososyal Destek</span>
+                                <span class="finance-percent">4%</span>
+                            </div>
+                            <div class="finance-bar">
+                                <div class="finance-bar-fill" data-width="4" style="background: #c0917a;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="trust-note">Detaylı mali raporlarımıza <a href="#">buradan</a> ulaşabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,30 C360,100 720,10 1080,70 C1260,100 1380,60 1440,50 L1440,120 L0,120 Z" fill="#fefcf9"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Bağış Section -->
+    <section class="section section-donate" id="bagis">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Fark Yarat</p>
+                <h2 class="section-title">Bugün Bir Hayat <span class="highlight">Değiştirebilirsin</span></h2>
+                <p class="section-desc">Ne kadar bağışladığın değil, bir hayata dokunup dokunmadığın önemli. Her kuruş, bir umut.</p>
+            </div>
+
+            <!-- Monthly Toggle -->
+            <div class="donate-toggle">
+                <span class="toggle-label" id="toggleLabelOnce">Tek Seferlik</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="monthlyToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label" id="toggleLabelMonthly">Aylık Bağış</span>
+                <span class="monthly-badge">Daha etkili</span>
+            </div>
+
+            <div class="donate-cards">
+                <div class="donate-card" data-amount="50">
+                    <div class="donate-amount">50 &#8378;</div>
+                    <div class="donate-impact">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e07c5a" stroke-width="2"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M3 14h18"/></svg>
+                        <span>Bir aileye sıcak battaniye</span>
+                    </div>
+                    <p class="donate-desc">Soğuk gecelerde bir aileyi ısıtacak kalın bir battaniye sağlar.</p>
+                    <button class="btn btn-primary btn-donate">Bağış Yap</button>
+                </div>
+
+                <div class="donate-card" data-amount="100">
+                    <div class="donate-amount">100 &#8378;</div>
+                    <div class="donate-impact">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#d4943a" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+                        <span>Bir gün sıcak yemek</span>
+                    </div>
+                    <p class="donate-desc">Afet bölgesinde bir aileye bir gün boyunca sıcak yemek sağlar.</p>
+                    <button class="btn btn-primary btn-donate">Bağış Yap</button>
+                </div>
+
+                <div class="donate-card donate-card-featured" data-amount="250">
+                    <div class="donate-popular">En Çok Tercih Edilen</div>
+                    <div class="donate-amount">250 &#8378;</div>
+                    <div class="donate-impact">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#7a9e7e" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span>Bir çocuğa kışlık mont</span>
+                    </div>
+                    <p class="donate-desc">Kış ortasında afete yakalanmış bir çocuğu soğuktan koruyacak sıcak bir mont.</p>
+                    <button class="btn btn-primary btn-donate">Bağış Yap</button>
+                </div>
+
+                <div class="donate-card" data-amount="500">
+                    <div class="donate-amount">500 &#8378;</div>
+                    <div class="donate-impact">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e07c5a" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <span>Bir ailenin haftalık ihtiyacı</span>
+                    </div>
+                    <p class="donate-desc">Bir ailenin bir hafta boyunca temel gıda, hijyen ve barınma ihtiyacını karşılar.</p>
+                    <button class="btn btn-primary btn-donate">Bağış Yap</button>
+                </div>
+
+                <div class="donate-card" data-amount="1000">
+                    <div class="donate-amount">1.000 &#8378;</div>
+                    <div class="donate-impact">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#d4943a" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        <span>Acil müdahale ekipmanı</span>
+                    </div>
+                    <p class="donate-desc">Kurtarma ekiplerinin hayat kurtaran profesyonel ekipman ihtiyacını karşılar.</p>
+                    <button class="btn btn-primary btn-donate">Bağış Yap</button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="donate-progress">
+                <div class="progress-header">
+                    <span class="progress-title">Bu Ayki Hedefimiz</span>
+                    <span class="progress-numbers"><strong class="progress-current counter" data-target="33500">0</strong> / 50.000 &#8378;</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-width="67">
+                        <span class="progress-percent">%67</span>
+                    </div>
+                </div>
+                <p class="progress-note">Hedefimize ulaşmamıza yardım et. Her bağış fark yaratır.</p>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="donate-trust">
+                <div class="donate-trust-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7a9e7e" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span>256-bit SSL Güvenli Ödeme</span>
+                </div>
+                <div class="donate-trust-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7a9e7e" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    <span>Vergi İndirimi Faturası</span>
+                </div>
+                <div class="donate-trust-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7a9e7e" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span>Şeffaf Hesap Yönetimi</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,70 C360,20 720,110 1080,50 C1260,20 1380,40 1440,70 L1440,120 L0,120 Z" fill="#f0ebe4"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Gönüllü Section -->
+    <section class="section section-volunteer" id="gonullu">
+        <div class="container">
+            <div class="volunteer-content">
+                <div class="section-header">
+                    <p class="section-eyebrow">Aramıza Katıl</p>
+                    <h2 class="section-title">Gel, Birlikte <span class="highlight">Hayat Kurtaralım</span></h2>
+                    <p class="section-desc">Gönüllü olmak için süper kahraman olmana gerek yok. Sadece iyi bir insan olman yeterli. Gerisini biz eğitiyoruz.</p>
+                </div>
+
+                <div class="volunteer-features">
+                    <div class="volunteer-feature">
+                        <div class="volunteer-feature-num">1</div>
+                        <div>
+                            <h4>Başvuru Yap</h4>
+                            <p>Online formunu doldur, seni tanıyalım.</p>
+                        </div>
+                    </div>
+                    <div class="volunteer-feature">
+                        <div class="volunteer-feature-num">2</div>
+                        <div>
+                            <h4>Eğitimlere Katıl</h4>
+                            <p>Ücretsiz ilk yardım ve arama kurtarma eğitimlerimize gel.</p>
+                        </div>
+                    </div>
+                    <div class="volunteer-feature">
+                        <div class="volunteer-feature-num">3</div>
+                        <div>
+                            <h4>Hayat Kurtar</h4>
+                            <p>Ekibimizle birlikte sahaya çık, fark yarat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="volunteer-cta">
+                    <a href="#iletisim" class="btn btn-primary btn-lg">Gönüllü Başvurusu Yap</a>
+                    <p class="volunteer-note">Şu ana kadar <strong>1.250+</strong> gönüllü aramıza katıldı.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,50 C240,100 480,10 720,70 C960,130 1200,30 1440,60 L1440,120 L0,120 Z" fill="#fefcf9"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section class="section section-contact" id="iletisim">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Bize Ulaşın</p>
+                <h2 class="section-title">Sormak İstediğin <span class="highlight">Bir Şey mi Var?</span></h2>
+                <p class="section-desc">Bağış, gönüllülük veya herhangi bir konuda bize yazmaktan çekinme. Seni dinlemekten mutluluk duyarız.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="contactName">Adın Soyadın</label>
+                        <input type="text" id="contactName" placeholder="Adını merak ediyoruz" required>
+                        <span class="form-error" id="nameError">Lütfen adını bizimle paylaş</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">E-posta Adresin</label>
+                        <input type="email" id="contactEmail" placeholder="sana geri dönmemiz için" required>
+                        <span class="form-error" id="emailError">Geçerli bir e-posta adresi girersen seviniriz</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Telefon (isteğe bağlı)</label>
+                        <input type="tel" id="contactPhone" placeholder="0555 123 45 67">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Konu</label>
+                        <select id="contactSubject" required>
+                            <option value="">Neyle ilgili yazmak istiyorsun?</option>
+                            <option value="bagis">Bağış Hakkında</option>
+                            <option value="gonullu">Gönüllü Olmak İstiyorum</option>
+                            <option value="isbirligi">İş Birliği Teklifi</option>
+                            <option value="bilgi">Genel Bilgi</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                        <span class="form-error" id="subjectError">Bir konu seçersen daha hızlı yardımcı olabiliriz</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Mesajın</label>
+                        <textarea id="contactMessage" rows="5" placeholder="İçinden geleni yaz, biz buradayız..." required></textarea>
+                        <span class="form-error" id="messageError">Mesajını duymak isteriz, lütfen birkaç satır yaz</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                        <span class="btn-text">Mesajını Gönder</span>
+                        <span class="btn-loading" style="display:none;">Gönderiliyor...</span>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e07c5a" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <strong>Adresimiz</strong>
+                            <p>Afet Mah. Kurtarma Cad. No: 42<br>Altındağ, Ankara</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e07c5a" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Telefon</strong>
+                            <p>+90 (312) 123 45 67<br>
+                            <span class="contact-highlight">Acil: 112</span></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e07c5a" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <strong>E-posta</strong>
+                            <p>info@afakder.org<br>bagis@afakder.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e07c5a" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <strong>Çalışma Saatleri</strong>
+                            <p>Pazartesi - Cuma: 09:00 - 18:00<br>
+                            <span class="contact-highlight">Acil müdahale: 7/24</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,80 C240,30 480,100 720,60 C960,20 1200,90 1440,50 L1440,120 L0,120 Z" fill="#2d2a26"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-emergency">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e07c5a" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Acil durumda <strong>112</strong>'yi arayın</span>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" width="36" height="36">
+                            <path d="M20 32 C20 32, 8 24, 8 16 C8 11, 12 8, 16 8 C18 8, 19.5 9, 20 10.5 C20.5 9, 22 8, 24 8 C28 8, 32 11, 32 16 C32 24, 20 32, 20 32Z" fill="#e07c5a"/>
+                        </svg>
+                        <strong>AFAKDER</strong>
+                    </div>
+                    <p>Afet Arama Kurtarma Derneği. 2015'ten bu yana hayat kurtarıyoruz. Senin desteğinle daha güçlüyüz.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#ne-yapiyoruz">Faaliyetlerimiz</a></li>
+                        <li><a href="#hikayeler">Hikayeler</a></li>
+                        <li><a href="#bagis">Bağış Yap</a></li>
+                        <li><a href="#gonullu">Gönüllü Ol</a></li>
+                        <li><a href="#guven">Güvenilirlik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Kurumsal</h4>
+                    <ul>
+                        <li><a href="#">Mali Raporlar</a></li>
+                        <li><a href="#">Tüzük</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">KVKK Aydınlatma</a></li>
+                        <li><a href="#">Basın Odası</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Bültenimize Katıl</h4>
+                    <p>Çalışmalarımızdan haberdar ol, hikayeleri ilk sen oku.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="E-posta adresin" required>
+                        <button type="submit" class="btn btn-primary">Katıl</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AFAKDER — Afet Arama Kurtarma Derneği. Tüm hakları saklıdır.</p>
+                <p class="footer-heart">Sevgiyle ve sorumlulukla yapılmıştır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 64 64" width="64" height="64">
+                    <circle cx="32" cy="32" r="28" fill="#7a9e7e" opacity="0.15"/>
+                    <path d="M20 32l8 8 16-16" fill="none" stroke="#7a9e7e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3>Mesajın Bize Ulaştı!</h3>
+            <p>En kısa sürede sana geri döneceğiz. İlgin için teşekkür ederiz.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Tamam</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

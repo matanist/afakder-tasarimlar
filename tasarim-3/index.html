@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFAKDER — Afet Arama Kurtarma Derneği</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">AFAKDER</div>
+            <div class="preloader-sub">Afet Arama Kurtarma Derneği</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-mark">A</span>
+                <span class="logo-text">AFAKDER</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-mobile-header">
+                    <span class="nav-mobile-logo">AFAKDER</span>
+                    <button class="nav-close-btn" id="navCloseBtn" aria-label="Menüyü kapat">&times;</button>
+                </li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#rakamlar">Rakamlarla Biz</a></li>
+                <li><a href="#faaliyetler">Faaliyetler</a></li>
+                <li><a href="#hikayemiz">Hikayemiz</a></li>
+                <li><a href="#egitimler">Eğitimler</a></li>
+                <li><a href="#gonullu">Gönüllü Ol</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">Afet Arama Kurtarma Derneği</span>
+                <h1 class="hero-title">
+                    Her Afette<br>
+                    <em>Oradayız</em>
+                </h1>
+                <p class="hero-desc">
+                    Deprem, sel, yangın... Doğal afetlerin karanlık anlarında umut ışığı olmak
+                    için çalışıyoruz. Eğitimli ekiplerimiz ve gönüllülerimizle hayat kurtarıyoruz.
+                </p>
+                <div class="hero-actions">
+                    <a href="#gonullu" class="btn btn-primary">Bize Katılın</a>
+                    <a href="#hakkimizda" class="btn btn-outline">Hikayemizi Okuyun</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-shape hero-shape-1"></div>
+                <div class="hero-shape hero-shape-2"></div>
+                <div class="hero-shape hero-shape-3"></div>
+                <div class="hero-icon-group">
+                    <div class="hero-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 8C23 8 16 15 16 24c0 14 16 32 16 32s16-18 16-32c0-9-7-16-16-16z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <circle cx="32" cy="24" r="6" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="hero-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 12l-4 8-9 1 6.5 6.5L24 37l8-4 8 4-1.5-9.5L45 21l-9-1z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="hero-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 52s-18-10-18-24a12 12 0 0124 0 12 12 0 0124 0c0 14-18 24-18 24z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hero-float-card">
+                    <span class="float-number">7/24</span>
+                    <span class="float-label">Kesintisiz Hazırlık</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Aşağı Kaydırın</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="section">
+        <div class="container">
+            <div class="section-label animate-in">Hakkımızda</div>
+            <div class="about-grid">
+                <div class="about-main animate-in">
+                    <h2 class="section-title">İnsanlık İçin<br><em>Bir Araya Geldik</em></h2>
+                    <p class="about-text">
+                        AFAKDER, Türkiye'nin dört bir yanında afet anında hızlı ve etkili müdahale
+                        edebilmek amacıyla kurulmuş bir sivil toplum kuruluşudur. Profesyonel eğitim
+                        almış ekiplerimiz ve binlerce gönüllümüzle afet öncesi hazırlık, afet anı
+                        müdahale ve afet sonrası iyileştirme çalışmaları yürütmekteyiz.
+                    </p>
+                    <p class="about-text">
+                        Her bir gönüllümüz, zorlu anlarda umut olmayı, karanlıkta ışık yakmayı
+                        görev edinmiştir. Bilimsel yöntemler ve modern teknoloji ile donatılmış
+                        ekiplerimiz, hayat kurtarmak için her an hazırdır.
+                    </p>
+                </div>
+                <div class="about-sidebar animate-in">
+                    <blockquote class="pull-quote">
+                        <p>"Bir hayat kurtarmak, tüm insanlığı kurtarmaktır."</p>
+                        <cite>— AFAKDER Kurucu İlkesi</cite>
+                    </blockquote>
+                    <div class="about-image-placeholder">
+                        <div class="image-pattern"></div>
+                        <span class="image-caption">Gönüllülerimiz sahada</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-values animate-in">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L6 20h6v20h24V20h6L24 4z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <h4>Güvenilirlik</h4>
+                    <p>Her koşulda yanınızdayız</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 40c0-8 7-14 16-14s16 6 16 14" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <h4>Dayanışma</h4>
+                    <p>Birlikte daha güçlüyüz</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4v40M4 24h40M10 10l28 28M38 10L10 38" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4>Profesyonellik</h4>
+                    <p>Bilimsel ve sistematik yaklaşım</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><path d="M24 44s-16-8-16-20a10 10 0 0120 0 10 10 0 0120 0c0 12-16 20-16 20z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h4>Merhamet</h4>
+                    <p>İnsanlık sevgisiyle hareket ederiz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rakamlarla Biz -->
+    <section id="rakamlar" class="section section-warm">
+        <div class="container">
+            <div class="section-label animate-in">Rakamlarla Biz</div>
+            <h2 class="section-title text-center animate-in">Sayılarla<br><em>Gücümüz</em></h2>
+            <div class="stats-grid">
+                <div class="stat-card animate-in">
+                    <div class="stat-accent"></div>
+                    <span class="stat-number" data-target="15000">0</span>
+                    <span class="stat-label">Eğitimli Gönüllü</span>
+                    <p class="stat-desc">Türkiye genelinde aktif gönüllülerimiz</p>
+                </div>
+                <div class="stat-card animate-in">
+                    <div class="stat-accent accent-olive"></div>
+                    <span class="stat-number" data-target="340">0</span>
+                    <span class="stat-label">Başarılı Operasyon</span>
+                    <p class="stat-desc">Tamamlanan arama kurtarma operasyonu</p>
+                </div>
+                <div class="stat-card animate-in">
+                    <div class="stat-accent accent-gold"></div>
+                    <span class="stat-number" data-target="2800">0</span>
+                    <span class="stat-label">Kurtarılan Can</span>
+                    <p class="stat-desc">Enkazdan sağ çıkarılan vatandaşlarımız</p>
+                </div>
+                <div class="stat-card animate-in">
+                    <div class="stat-accent accent-brown"></div>
+                    <span class="stat-number" data-target="81">0</span>
+                    <span class="stat-label">İl Teşkilatı</span>
+                    <p class="stat-desc">Tüm illerde örgütlü yapımız</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faaliyetler -->
+    <section id="faaliyetler" class="section">
+        <div class="container">
+            <div class="section-label animate-in">Faaliyetlerimiz</div>
+            <h2 class="section-title animate-in">Ne<br><em>Yapıyoruz?</em></h2>
+            <div class="activities-grid">
+                <div class="activity-card activity-large animate-in">
+                    <div class="activity-image" style="background: linear-gradient(135deg, #c4553a22, #c4553a44);">
+                        <div class="activity-pattern">
+                            <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="80" stroke="#c4553a" stroke-width="1" opacity="0.3"/><circle cx="100" cy="100" r="50" stroke="#c4553a" stroke-width="1" opacity="0.2"/><path d="M100 20v160M20 100h160" stroke="#c4553a" stroke-width="0.5" opacity="0.2"/></svg>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-tag">Ana Faaliyet</span>
+                        <h3>Arama Kurtarma Operasyonları</h3>
+                        <p>Deprem, çökme, göçük gibi afetlerde profesyonel ekipmanlarla arama kurtarma çalışmaları yürütüyoruz. 7/24 hazır ekiplerimizle dakikalar içinde sahaya intikal ediyoruz.</p>
+                    </div>
+                </div>
+                <div class="activity-card animate-in">
+                    <div class="activity-image" style="background: linear-gradient(135deg, #4a674122, #4a674144);">
+                        <div class="activity-pattern">
+                            <svg viewBox="0 0 200 200" fill="none"><rect x="40" y="40" width="120" height="120" rx="20" stroke="#4a6741" stroke-width="1" opacity="0.3"/><rect x="70" y="70" width="60" height="60" rx="10" stroke="#4a6741" stroke-width="1" opacity="0.2"/></svg>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-tag">Eğitim</span>
+                        <h3>Afet Bilinçlendirme</h3>
+                        <p>Toplumun afetlere hazırlıklı olması için okullar, iş yerleri ve mahalleler düzeyinde bilinçlendirme eğitimleri veriyoruz.</p>
+                    </div>
+                </div>
+                <div class="activity-card animate-in">
+                    <div class="activity-image" style="background: linear-gradient(135deg, #b8860b22, #b8860b44);">
+                        <div class="activity-pattern">
+                            <svg viewBox="0 0 200 200" fill="none"><polygon points="100,20 180,180 20,180" stroke="#b8860b" stroke-width="1" opacity="0.3" fill="none"/><polygon points="100,60 150,150 50,150" stroke="#b8860b" stroke-width="1" opacity="0.2" fill="none"/></svg>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-tag">İnsani Yardım</span>
+                        <h3>Afet Sonrası Destek</h3>
+                        <p>Afet sonrasında barınma, gıda, psikolojik destek ve sosyal yardım hizmetleri sunarak toplumun toparlanmasına katkı sağlıyoruz.</p>
+                    </div>
+                </div>
+                <div class="activity-card animate-in">
+                    <div class="activity-image" style="background: linear-gradient(135deg, #5c3d2e22, #5c3d2e44);">
+                        <div class="activity-pattern">
+                            <svg viewBox="0 0 200 200" fill="none"><circle cx="60" cy="100" r="40" stroke="#5c3d2e" stroke-width="1" opacity="0.3" fill="none"/><circle cx="140" cy="100" r="40" stroke="#5c3d2e" stroke-width="1" opacity="0.3" fill="none"/></svg>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-tag">Hazırlık</span>
+                        <h3>Tatbikat ve Simülasyonlar</h3>
+                        <p>Düzenli aralıklarla gerçekçi tatbikatlar düzenleyerek ekiplerimizin ve toplumun afetlere hazırlık seviyesini artırıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hikayemiz / Timeline -->
+    <section id="hikayemiz" class="section section-warm">
+        <div class="container">
+            <div class="section-label animate-in">Hikayemiz</div>
+            <h2 class="section-title animate-in">Yıllar İçinde<br><em>Büyüdük</em></h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item animate-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">1999</div>
+                    <div class="timeline-card">
+                        <h4>Kuruluş</h4>
+                        <p>17 Ağustos Marmara Depremi'nin ardından, bir grup gönüllü tarafından İstanbul'da kurulduk. İlk amacımız, bir daha böyle felaketlerde hazırlıksız yakalanmamaktı.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2003</div>
+                    <div class="timeline-card">
+                        <h4>İlk Büyük Operasyon</h4>
+                        <p>Bingöl Depremi'nde 50 kişilik ekiple sahada yer aldık. 34 vatandaşımızı enkazdan sağ çıkardık ve ulusal ölçekte tanındık.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2011</div>
+                    <div class="timeline-card">
+                        <h4>Van Depremi Müdahalesi</h4>
+                        <p>Van Depremi'nde 200'den fazla gönüllümüzle bölgeye ulaştık. Haftalarca süren arama kurtarma çalışmalarına liderlik ettik.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-card">
+                        <h4>Elazığ ve İzmir Depremleri</h4>
+                        <p>Art arda gelen depremlerde hızlı müdahale kapasitemizi kanıtladık. Dijital koordinasyon sistemlerimizi hayata geçirdik.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-card">
+                        <h4>Kahramanmaraş Depremleri</h4>
+                        <p>6 Şubat depremlerinde 11 ilde eş zamanlı operasyon yürüttük. 1.200'den fazla vatandaşımızı enkazdan çıkardık. En büyük sınavımızdı.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026</div>
+                    <div class="timeline-card">
+                        <h4>Bugün</h4>
+                        <p>81 ilde teşkilatlanmış, 15.000 eğitimli gönüllüye sahip Türkiye'nin en büyük sivil arama kurtarma derneği olarak faaliyetlerimize devam ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eğitimler -->
+    <section id="egitimler" class="section">
+        <div class="container">
+            <div class="training-wrapper animate-in">
+                <div class="training-content">
+                    <div class="section-label">Eğitimler</div>
+                    <h2 class="section-title">Hayat Kurtarmayı<br><em>Öğrenin</em></h2>
+                    <p>AFAKDER eğitim programları, sivil vatandaşlardan profesyonel kurtarma ekiplerine kadar her seviyede katılımcıya açıktır. Uluslararası standartlarda eğitim veren uzman kadromuzla sizi afetlere hazırlıyoruz.</p>
+                    <div class="training-list">
+                        <div class="training-item">
+                            <span class="training-num">01</span>
+                            <div>
+                                <h4>Temel Afet Bilinci Eğitimi</h4>
+                                <p>Afet öncesi, anı ve sonrasında yapılması gerekenleri öğrenin.</p>
+                            </div>
+                        </div>
+                        <div class="training-item">
+                            <span class="training-num">02</span>
+                            <div>
+                                <h4>İlk Yardım ve Triaj</h4>
+                                <p>Afet koşullarında ilk yardım ve önceliklendirme teknikleri.</p>
+                            </div>
+                        </div>
+                        <div class="training-item">
+                            <span class="training-num">03</span>
+                            <div>
+                                <h4>Hafif Arama Kurtarma</h4>
+                                <p>Basit araçlarla enkaz altından kurtarma yöntemleri.</p>
+                            </div>
+                        </div>
+                        <div class="training-item">
+                            <span class="training-num">04</span>
+                            <div>
+                                <h4>Profesyonel USAR Eğitimi</h4>
+                                <p>Uluslararası standartlarda kentsel arama kurtarma eğitimi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#iletisim" class="btn btn-primary">Eğitime Başvurun</a>
+                </div>
+                <div class="training-visual">
+                    <div class="training-decoration">
+                        <div class="deco-circle deco-1"></div>
+                        <div class="deco-circle deco-2"></div>
+                        <div class="deco-circle deco-3"></div>
+                        <div class="deco-text">
+                            <span class="deco-big">4</span>
+                            <span class="deco-small">farklı<br>eğitim<br>programı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gönüllü Ol -->
+    <section id="gonullu" class="section section-cta">
+        <div class="container">
+            <div class="cta-wrapper animate-in">
+                <div class="cta-decorations">
+                    <div class="cta-shape cta-shape-1"></div>
+                    <div class="cta-shape cta-shape-2"></div>
+                    <div class="cta-shape cta-shape-3"></div>
+                </div>
+                <div class="cta-content">
+                    <span class="cta-tag">Gönüllü Ol</span>
+                    <h2 class="cta-title">Bir Hayat<br>Kurtarmak İçin<br><em>Tek Adım Yeter</em></h2>
+                    <p class="cta-desc">
+                        Afetlerde fark yaratan, umut olan, hayat kurtaran binlerce gönüllümüze
+                        siz de katılın. Yaş, meslek veya deneyim fark etmez — ihtiyacımız olan
+                        tek şey sizin yüreğiniz.
+                    </p>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Ücretsiz eğitim</span>
+                        </div>
+                        <div class="cta-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Sertifikalı programlar</span>
+                        </div>
+                        <div class="cta-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Ekipman desteği</span>
+                        </div>
+                        <div class="cta-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Sigorta güvencesi</span>
+                        </div>
+                    </div>
+                    <a href="#iletisim" class="btn btn-white">Hemen Başvurun</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="section">
+        <div class="container">
+            <div class="section-label animate-in">İletişim</div>
+            <h2 class="section-title animate-in">Bizimle<br><em>İletişime Geçin</em></h2>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper animate-in">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Adınız Soyadınız</label>
+                            <input type="text" id="name" name="name" required placeholder="Adınızı giriniz">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" name="email" required placeholder="ornek@mail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" name="phone" placeholder="0555 555 55 55">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Konu</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Konu seçiniz</option>
+                                <option value="gonullu">Gönüllü Başvurusu</option>
+                                <option value="egitim">Eğitim Talebi</option>
+                                <option value="bagis">Bağış ve Destek</option>
+                                <option value="isbirligi">İş Birliği Teklifi</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Mesajınızı yazınız..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Mesaj Gönderin</button>
+                        <div id="formSuccess" class="form-success" style="display:none;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <p>Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info animate-in">
+                    <div class="contact-card">
+                        <h4>Genel Merkez</h4>
+                        <p>Kızılay Mahallesi, Atatürk Bulvarı No: 142/A<br>Çankaya, Ankara 06420</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Telefon</h4>
+                        <p><a href="tel:+903125551999">+90 (312) 555 19 99</a></p>
+                        <p><a href="tel:+903125551998">+90 (312) 555 19 98</a> <small>(Faks)</small></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>E-posta</h4>
+                        <p><a href="mailto:info@afakder.org.tr">info@afakder.org.tr</a></p>
+                        <p><a href="mailto:gonullu@afakder.org.tr">gonullu@afakder.org.tr</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Çalışma Saatleri</h4>
+                        <p>Pazartesi — Cuma: 09:00 — 18:00</p>
+                        <p><em>Acil durumlar için 7/24 ulaşılabilir</em></p>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-mark">A</span>
+                        <span class="logo-text">AFAKDER</span>
+                    </div>
+                    <p>Afet Arama Kurtarma Derneği olarak, Türkiye'nin dört bir yanında afetlere karşı hazırlıklı olmak ve hayat kurtarmak için çalışıyoruz.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#faaliyetler">Faaliyetlerimiz</a></li>
+                        <li><a href="#egitimler">Eğitimler</a></li>
+                        <li><a href="#gonullu">Gönüllü Ol</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kaynaklar</h4>
+                    <ul>
+                        <li><a href="#">Afet Çantası Rehberi</a></li>
+                        <li><a href="#">Deprem Anında Ne Yapmalı</a></li>
+                        <li><a href="#">Aile Afet Planı</a></li>
+                        <li><a href="#">Eğitim Takvimi</a></li>
+                        <li><a href="#">Basın Bültenleri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Yasal</h4>
+                    <ul>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Koşulları</a></li>
+                        <li><a href="#">KVKK Aydınlatma Metni</a></li>
+                        <li><a href="#">Çerez Politikası</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AFAKDER — Afet Arama Kurtarma Derneği. Tüm hakları saklıdır.</p>
+                <p class="footer-motto">Her afette oradayız.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
