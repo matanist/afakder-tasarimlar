@@ -1,0 +1,62 @@
+@model List<NavLink>
+@{
+    ViewData["Title"] = "Navigasyon Linkleri";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between">
+        <span>Navigasyon Linkleri</span>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Metin</th>
+                    <th>URL</th>
+                    <th>Sıra</th>
+                    <th>Aktif</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var link in Model)
+                {
+                    <tr>
+                        <td>@link.Text</td>
+                        <td>@link.Url</td>
+                        <td>@link.SortOrder</td>
+                        <td>@(link.IsActive ? "Evet" : "Hayır")</td>
+                        <td>
+                            <form asp-action="Delete" asp-route-id="@link.Id" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <form asp-action="Create" method="post" class="row g-2 mt-3">
+            @Html.AntiForgeryToken()
+            <div class="col">
+                <input type="text" class="form-control" name="Text" placeholder="Metin" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Url" placeholder="URL" />
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="SortOrder" placeholder="Sıra" value="0" />
+            </div>
+            <div class="col">
+                <select class="form-select" name="IsActive">
+                    <option value="true">Aktif</option>
+                    <option value="false">Pasif</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-afakder">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>

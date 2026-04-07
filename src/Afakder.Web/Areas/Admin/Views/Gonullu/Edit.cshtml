@@ -1,0 +1,87 @@
+@model GonulluSection
+@{
+    ViewData["Title"] = "Gönüllü Bölümü";
+    var benefits = ViewBag.Benefits as List<VolunteerBenefit> ?? new List<VolunteerBenefit>();
+}
+
+<div class="card mb-4">
+    <div class="card-header">Gönüllü Bölümü Ayarları</div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label class="form-label">Bölüm Etiketi</label>
+                <input type="text" class="form-control" asp-for="SectionTag" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Başlık</label>
+                <input type="text" class="form-control" asp-for="Title" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Başlık Vurgu</label>
+                <input type="text" class="form-control" asp-for="TitleHighlight" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Açıklama</label>
+                <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Form Başlığı</label>
+                <input type="text" class="form-control" asp-for="FormTitle" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gönder Butonu Metni</label>
+                <input type="text" class="form-control" asp-for="SubmitButtonText" />
+            </div>
+
+            <button type="submit" class="btn btn-afakder">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between">
+        <span>Gönüllü Avantajları</span>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Metin</th>
+                    <th>Sıra</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var benefit in benefits)
+                {
+                    <tr>
+                        <td>@benefit.Text</td>
+                        <td>@benefit.SortOrder</td>
+                        <td>
+                            <form asp-action="DeleteBenefit" asp-route-id="@benefit.Id" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <form asp-action="CreateBenefit" method="post" class="row g-2 mt-3">
+            @Html.AntiForgeryToken()
+            <div class="col">
+                <input type="text" class="form-control" name="Text" placeholder="Avantaj Metni" />
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="SortOrder" placeholder="Sıra" value="0" />
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-afakder">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>

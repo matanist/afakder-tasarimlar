@@ -1,0 +1,22 @@
+@model FaaliyetlerViewModel
+
+<section id="faaliyetler" class="section section-activities">
+  <div class="container">
+    <span class="section-tag">@Model.Section.SectionTag</span>
+    <h2 class="section-title">@Model.Section.Title</h2>
+    <p class="section-desc">@Model.Section.Description</p>
+
+    <div class="activities-grid">
+      @foreach (var card in Model.ActivityCards)
+      {
+          <div class="activity-card" data-animate>
+            <div class="activity-icon">
+              @Html.Raw(card.SvgIcon)
+            </div>
+            <h3>@card.Title</h3>
+            <p>@card.Description</p>
+          </div>
+      }
+    </div>
+  </div>
+</section>

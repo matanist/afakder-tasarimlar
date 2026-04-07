@@ -1,0 +1,91 @@
+@model BlogPost
+@{
+    ViewData["Title"] = "Yazıyı Düzenle";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="mb-0">Yazıyı Düzenle</h4>
+    <a href="/admin/blogposts" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Geri
+    </a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post" asp-action="Edit" asp-controller="BlogPosts" asp-area="Admin" asp-route-id="@Model.Id">
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="mb-3">
+                        <label for="Title" class="form-label fw-semibold">Başlık</label>
+                        <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Summary" class="form-label fw-semibold">Özet</label>
+                        <textarea class="form-control" id="Summary" name="Summary" rows="3">@Model.Summary</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Content" class="form-label fw-semibold">İçerik</label>
+                        <textarea class="form-control" id="Content" name="Content" rows="12">@Model.Content</textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="mb-3">
+                        <label for="CategoryId" class="form-label fw-semibold">Kategori</label>
+                        <select class="form-select" id="CategoryId" name="CategoryId" required>
+                            <option value="">Kategori seçin</option>
+                            @foreach (SelectListItem item in (SelectList)ViewBag.Categories)
+                            {
+                                <option value="@item.Value" selected="@item.Selected">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="FeaturedImageUrl" class="form-label fw-semibold">Kapak Görseli URL</label>
+                        <input type="url" class="form-control" id="FeaturedImageUrl" name="FeaturedImageUrl" value="@Model.FeaturedImageUrl" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="MetaTitle" class="form-label fw-semibold">Meta Başlık</label>
+                        <input type="text" class="form-control" id="MetaTitle" name="MetaTitle" value="@Model.MetaTitle" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="MetaDescription" class="form-label fw-semibold">Meta Açıklama</label>
+                        <textarea class="form-control" id="MetaDescription" name="MetaDescription" rows="2">@Model.MetaDescription</textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="IsPublished" name="IsPublished" value="true"
+                               @(Model.IsPublished ? "checked" : "") />
+                        <label class="form-check-label fw-semibold" for="IsPublished">Yayınla</label>
+                    </div>
+
+                    <div class="text-muted small">
+                        <div>Oluşturulma: @Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</div>
+                        <div>Güncelleme: @Model.UpdatedAt.ToString("dd.MM.yyyy HH:mm")</div>
+                        @if (Model.PublishedAt.HasValue)
+                        {
+                            <div>Yayın: @Model.PublishedAt.Value.ToString("dd.MM.yyyy HH:mm")</div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-afakder">
+                    <i class="bi bi-check-lg"></i> Güncelle
+                </button>
+                <a href="/admin/blogposts" class="btn btn-outline-secondary">İptal</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@using Microsoft.AspNetCore.Mvc.Rendering

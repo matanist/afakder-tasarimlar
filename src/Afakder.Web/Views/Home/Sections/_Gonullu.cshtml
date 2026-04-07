@@ -1,0 +1,55 @@
+@model GonulluViewModel
+
+<section id="gonullu" class="section section-volunteer">
+  <div class="container">
+    <div class="volunteer-wrapper">
+      <div class="volunteer-info">
+        <span class="section-tag">@Model.Section.SectionTag</span>
+        <h2 class="section-title">@Model.Section.Title<br><span class="highlight">@Model.Section.TitleHighlight</span></h2>
+        <p class="volunteer-desc">@Model.Section.Description</p>
+        <ul class="volunteer-benefits">
+          @foreach (var benefit in Model.Benefits)
+          {
+              <li>
+                <span class="benefit-icon">
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                </span>
+                @benefit.Text
+              </li>
+          }
+        </ul>
+      </div>
+      <div class="volunteer-form-wrapper">
+        <form id="volunteerForm" class="warm-form" asp-controller="Form" asp-action="Gonullu" method="post" novalidate>
+          @Html.AntiForgeryToken()
+          <h3 class="form-title">@Model.Section.FormTitle</h3>
+          <div class="form-group">
+            <label for="vName">Adınız Soyadınız</label>
+            <input type="text" id="vName" name="Name" placeholder="Adınızı yazın..." required>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="vEmail">E-posta Adresiniz</label>
+            <input type="email" id="vEmail" name="Email" placeholder="ornek@email.com" required>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="vPhone">Telefon Numaranız</label>
+            <input type="tel" id="vPhone" name="Phone" placeholder="05XX XXX XX XX" required>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="vCity">Şehriniz</label>
+            <input type="text" id="vCity" name="City" placeholder="Hangi şehirdesiniz?" required>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="vMessage">Neden gönüllü olmak istiyorsunuz?</label>
+            <textarea id="vMessage" name="Message" rows="3" placeholder="Birkaç cümle yeterli..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">@Model.Section.SubmitButtonText</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

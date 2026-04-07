@@ -1,0 +1,66 @@
+@model BlogListViewModel
+
+<section class="section" style="background: var(--light-warm); min-height: 80vh; padding-top: 120px;">
+  <div class="container">
+    <span class="section-tag">Blog</span>
+    <h2 class="section-title">Haberler & Yazılar</h2>
+
+    @if (!string.IsNullOrEmpty(Model.CurrentCategorySlug))
+    {
+        var cat = Model.Categories.FirstOrDefault(c => c.Slug == Model.CurrentCategorySlug);
+        <p class="section-desc">Kategori: <strong>@cat?.Name</strong> <a href="/blog" style="color: var(--sunset-orange);">(Tümünü göster)</a></p>
+    }
+    @if (!string.IsNullOrEmpty(Model.CurrentTagSlug))
+    {
+        <p class="section-desc">Etiket: <strong>@Model.CurrentTagSlug</strong> <a href="/blog" style="color: var(--sunset-orange);">(Tümünü göster)</a></p>
+    }
+
+    @if (Model.Posts.Any())
+    {
+        <div class="activities-grid" style="margin-top: 40px;">
+          @foreach (var post in Model.Posts)
+          {
+              <a href="/blog/@post.Slug" class="activity-card" data-animate style="text-decoration: none; cursor: pointer;">
+                @if (!string.IsNullOrEmpty(post.FeaturedImageUrl))
+                {
+                    <img src="@post.FeaturedImageUrl" alt="@post.Title" style="width:100%; height:180px; object-fit:cover; border-radius: var(--radius-sm); margin-bottom: 16px;">
+                }
+                <h3>@post.Title</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">@post.Category.Name &bull; @post.PublishedAt?.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</p>
+                <p>@post.Summary</p>
+              </a>
+          }
+        </div>
+
+        @if (Model.TotalPages > 1)
+        {
+            <div style="display: flex; justify-content: center; gap: 8px; margin-top: 40px;">
+              @for (int i = 1; i <= Model.TotalPages; i++)
+              {
+                  var isActive = i == Model.CurrentPage;
+                  <a href="/blog?page=@i@(Model.CurrentCategorySlug != null ? $"&kategori={Model.CurrentCategorySlug}" : "")@(Model.CurrentTagSlug != null ? $"&etiket={Model.CurrentTagSlug}" : "")"
+                     class="btn @(isActive ? "btn-primary" : "btn-outline")"
+                     style="min-width: 44px; padding: 8px 16px;">@i</a>
+              }
+            </div>
+        }
+    }
+    else
+    {
+        <p class="section-desc" style="margin-top: 40px;">Henüz blog yazısı yayınlanmamış.</p>
+    }
+
+    @if (Model.Categories.Any())
+    {
+        <div style="margin-top: 60px;">
+          <h3 style="font-family: 'Quicksand', sans-serif; margin-bottom: 16px;">Kategoriler</h3>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            @foreach (var cat in Model.Categories)
+            {
+                <a href="/blog/kategori/@cat.Slug" class="btn btn-outline" style="font-size: 0.9rem;">@cat.Name</a>
+            }
+          </div>
+        </div>
+    }
+  </div>
+</section>

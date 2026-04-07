@@ -1,0 +1,94 @@
+@model EtkiSection
+@{
+    ViewData["Title"] = "Etki Bölümü";
+    var cards = ViewBag.StoryCards as List<StoryCard> ?? new List<StoryCard>();
+}
+
+<div class="card mb-4">
+    <div class="card-header">Etki Bölümü Ayarları</div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label class="form-label">Bölüm Etiketi</label>
+                <input type="text" class="form-control" asp-for="SectionTag" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Başlık</label>
+                <input type="text" class="form-control" asp-for="Title" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Başlık Vurgu</label>
+                <input type="text" class="form-control" asp-for="TitleHighlight" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Açıklama</label>
+                <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-afakder">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between">
+        <span>Hikaye Kartları</span>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>İsim</th>
+                    <th>Konum</th>
+                    <th>Alıntı</th>
+                    <th>Avatar CSS</th>
+                    <th>Sıra</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var card in cards)
+                {
+                    <tr>
+                        <td>@card.Name</td>
+                        <td>@card.Location</td>
+                        <td>@card.Quote</td>
+                        <td>@card.AvatarCssClass</td>
+                        <td>@card.SortOrder</td>
+                        <td>
+                            <form asp-action="DeleteStoryCard" asp-route-id="@card.Id" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <form asp-action="CreateStoryCard" method="post" class="row g-2 mt-3">
+            @Html.AntiForgeryToken()
+            <div class="col">
+                <input type="text" class="form-control" name="Name" placeholder="İsim" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Location" placeholder="Konum" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Quote" placeholder="Alıntı" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="AvatarCssClass" placeholder="Avatar CSS Sınıfı" />
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="SortOrder" placeholder="Sıra" value="0" />
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-afakder">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>

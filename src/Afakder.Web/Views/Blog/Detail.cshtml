@@ -1,0 +1,37 @@
+@model BlogPost
+
+<section class="section" style="background: var(--light-warm); min-height: 80vh; padding-top: 120px;">
+  <div class="container" style="max-width: 800px;">
+    <a href="/blog" style="color: var(--sunset-orange); font-size: 0.9rem;">&larr; Blog'a Dön</a>
+
+    <article style="margin-top: 24px;">
+      @if (!string.IsNullOrEmpty(Model.FeaturedImageUrl))
+      {
+          <img src="@Model.FeaturedImageUrl" alt="@Model.Title" style="width:100%; height:400px; object-fit:cover; border-radius: var(--radius); margin-bottom: 32px;">
+      }
+
+      <span class="section-tag">@Model.Category.Name</span>
+      <h1 style="font-family: 'Quicksand', sans-serif; font-size: 2.4rem; margin: 16px 0 8px; color: var(--text-dark);">@Model.Title</h1>
+
+      <div style="display: flex; gap: 16px; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 32px;">
+        <span>@Model.Author.FullName</span>
+        <span>&bull;</span>
+        <span>@Model.PublishedAt?.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</span>
+      </div>
+
+      @if (Model.PostTags.Any())
+      {
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;">
+            @foreach (var pt in Model.PostTags)
+            {
+                <a href="/blog/etiket/@pt.BlogTag.Slug" style="background: var(--glass-warm); color: var(--sunset-orange); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;">@pt.BlogTag.Name</a>
+            }
+          </div>
+      }
+
+      <div class="blog-content" style="font-size: 1.05rem; line-height: 1.9; color: var(--text-body);">
+        @Html.Raw(Model.Content)
+      </div>
+    </article>
+  </div>
+</section>
