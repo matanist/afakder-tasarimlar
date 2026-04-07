@@ -1,0 +1,141 @@
+@{
+    var settings = ViewData["SiteSettings"] as SiteSetting;
+    var navLinks = ViewData["NavLinks"] as List<NavLink>;
+    var socialLinks = ViewData["SocialLinks"] as List<SocialLink>;
+    var footerLinks = ViewData["FooterLinks"] as List<FooterLink>;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@(ViewData["Title"] ?? settings?.DefaultPageTitle ?? "AFAKDER")</title>
+  <meta name="description" content="@(ViewData["MetaDescription"] ?? settings?.DefaultMetaDescription ?? "")">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-pulse"></div>
+      <p class="preloader-text">@(settings?.PreloaderText ?? "umut yükleniyor...")</p>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">
+          @if (settings != null)
+          {
+              @Html.Raw(settings.LogoSvg)
+          }
+        </span>
+        <span class="logo-text">@(settings?.LogoText ?? "AFAKDER")</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        @if (navLinks != null)
+        {
+            @foreach (var link in navLinks)
+            {
+                <li><a href="@link.Url">@link.Text</a></li>
+            }
+        }
+      </ul>
+      <a href="@(settings?.NavCtaUrl ?? "#bagis")" class="nav-cta">@(settings?.NavCtaText ?? "Destek Ol")</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-links">
+        @if (navLinks != null)
+        {
+            @foreach (var link in navLinks)
+            {
+                <li><a href="@link.Url">@link.Text</a></li>
+            }
+        }
+      </ul>
+      <a href="@(settings?.NavCtaUrl ?? "#bagis")" class="mobile-cta">@(settings?.NavCtaText ?? "Destek Ol")</a>
+    </div>
+  </div>
+
+  @RenderBody()
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">@(settings?.LogoText ?? "AFAKDER")</span>
+          <p class="footer-tagline">@(settings?.FooterTagline ?? "")</p>
+          <p class="footer-motto">"@(settings?.FooterMotto ?? "")"</p>
+        </div>
+        <div class="footer-emergency">
+          <div class="emergency-badge">
+            <span class="emergency-number">@(settings?.EmergencyNumber ?? "112")</span>
+            <span class="emergency-text">@(settings?.EmergencyText ?? "Acil Durum Hattı")</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Hızlı Erişim</h4>
+          <ul>
+            @if (footerLinks != null)
+            {
+                @foreach (var link in footerLinks)
+                {
+                    <li><a href="@link.Url">@link.Text</a></li>
+                }
+            }
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Bizi Takip Edin</h4>
+          <div class="social-links">
+            @if (socialLinks != null)
+            {
+                @foreach (var link in socialLinks)
+                {
+                    <a href="@link.Url" class="social-link" aria-label="@link.AriaLabel">
+                      @Html.Raw(link.SvgIcon)
+                    </a>
+                }
+            }
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>@Html.Raw(settings?.Copyright ?? "")</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+      <h3 class="modal-title"></h3>
+      <p class="modal-text"></p>
+      <button class="btn btn-primary modal-close" onclick="closeModal()">Tamam</button>
+    </div>
+  </div>
+
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

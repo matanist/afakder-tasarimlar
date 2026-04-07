@@ -1,0 +1,45 @@
+@model EtkiViewModel
+
+<section id="etki" class="section section-impact">
+  <div class="container">
+    <span class="section-tag">@Model.Section.SectionTag</span>
+    <h2 class="section-title">@Model.Section.Title<br><span class="highlight">@Model.Section.TitleHighlight</span> Var</h2>
+    <p class="section-desc">@Model.Section.Description</p>
+
+    <div class="story-grid">
+      @foreach (var card in Model.StoryCards)
+      {
+          <div class="story-card" data-animate>
+            <div class="story-avatar">
+              <div class="avatar-circle @card.AvatarCssClass">
+                @if (card.AvatarCssClass == "avatar-3")
+                {
+                    <svg viewBox="0 0 60 60" fill="none">
+                      <circle cx="30" cy="25" r="8" fill="currentColor" opacity="0.7"/>
+                      <ellipse cx="30" cy="43" rx="12" ry="8" fill="currentColor" opacity="0.5"/>
+                    </svg>
+                }
+                else
+                {
+                    <svg viewBox="0 0 60 60" fill="none">
+                      <circle cx="30" cy="22" r="10" fill="currentColor" opacity="0.7"/>
+                      <ellipse cx="30" cy="45" rx="16" ry="10" fill="currentColor" opacity="0.5"/>
+                    </svg>
+                }
+              </div>
+              <span class="story-heart">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18l-1.45-1.32C3.4 12.36 0 9.28 0 5.5 0 2.42 2.42 0 5.5 0 7.24 0 8.91.81 10 2.09 11.09.81 12.76 0 14.5 0 17.58 0 20 2.42 20 5.5c0 3.78-3.4 6.86-8.55 11.18L10 18z"/></svg>
+              </span>
+            </div>
+            <div class="story-body">
+              <h3 class="story-name">@card.Name</h3>
+              <span class="story-location">@card.Location</span>
+              <blockquote class="story-quote">
+                "@Html.Raw(card.Quote)"
+              </blockquote>
+            </div>
+          </div>
+      }
+    </div>
+  </div>
+</section>

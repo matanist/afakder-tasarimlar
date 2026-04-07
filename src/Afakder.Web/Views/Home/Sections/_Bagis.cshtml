@@ -1,0 +1,56 @@
+@model BagisViewModel
+
+<section id="bagis" class="section section-donate">
+  <div class="container">
+    <div class="donate-header">
+      <span class="section-tag">@Model.Section.SectionTag</span>
+      <h2 class="section-title donate-title">@Model.Section.Title<br><span class="highlight">@Model.Section.TitleHighlight</span></h2>
+      <p class="section-desc">@Model.Section.Description</p>
+    </div>
+
+    <div class="donation-progress-wrapper" data-animate>
+      <div class="progress-header">
+        <h3 class="progress-title">@Model.Section.CampaignTitle</h3>
+        <span class="progress-target">@Model.Section.CampaignTarget</span>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" data-progress="@Model.Section.CampaignProgress">
+          <div class="progress-fill"></div>
+          <div class="progress-glow"></div>
+        </div>
+        <div class="progress-info">
+          <span class="progress-amount">@Model.Section.CampaignAmount</span>
+          <span class="progress-percent">%@Model.Section.CampaignProgress</span>
+        </div>
+      </div>
+      <p class="progress-note">@Model.Section.CampaignNote</p>
+    </div>
+
+    <div class="donate-toggle">
+      <button class="toggle-btn active" data-type="once">Tek Seferlik</button>
+      <button class="toggle-btn" data-type="aylik">Aylık Bağış</button>
+    </div>
+
+    <div class="impact-grid">
+      @foreach (var card in Model.ImpactCards)
+      {
+          <div class="impact-card@(card.IsFeatured ? " featured" : "")" data-amount="@card.Amount" data-animate>
+            @if (card.IsFeatured && !string.IsNullOrEmpty(card.FeaturedBadgeText))
+            {
+                <span class="impact-badge">@card.FeaturedBadgeText</span>
+            }
+            <span class="impact-amount">@card.Amount.ToString("N0", new System.Globalization.CultureInfo("tr-TR"))₺</span>
+            <div class="impact-icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <p class="impact-desc">@Html.Raw(card.Description)</p>
+            <button class="impact-btn">Bağış Yap</button>
+          </div>
+      }
+    </div>
+
+    <p class="donate-note">@Model.Section.FooterNote</p>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+@model HeroSection
+@{
+    ViewData["Title"] = "Hero Bölümü";
+    var stats = ViewBag.Stats as List<HeroStat> ?? new List<HeroStat>();
+}
+
+<div class="card mb-4">
+    <div class="card-header">Hero Bölümü Ayarları</div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label class="form-label">Başlık Satır 1</label>
+                <input type="text" class="form-control" asp-for="TitleLine1" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Başlık Vurgu</label>
+                <input type="text" class="form-control" asp-for="TitleHighlight" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Alt Başlık</label>
+                <input type="text" class="form-control" asp-for="Subtitle" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Birincil CTA Metni</label>
+                <input type="text" class="form-control" asp-for="PrimaryCtaText" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Birincil CTA URL</label>
+                <input type="text" class="form-control" asp-for="PrimaryCtaUrl" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">İkincil CTA Metni</label>
+                <input type="text" class="form-control" asp-for="SecondaryCtaText" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">İkincil CTA URL</label>
+                <input type="text" class="form-control" asp-for="SecondaryCtaUrl" />
+            </div>
+
+            <button type="submit" class="btn btn-afakder">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between">
+        <span>İstatistikler</span>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Değer</th>
+                    <th>Etiket</th>
+                    <th>Sıra</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var stat in stats)
+                {
+                    <tr>
+                        <td>@stat.Value</td>
+                        <td>@stat.Label</td>
+                        <td>@stat.SortOrder</td>
+                        <td>
+                            <form asp-action="DeleteStat" asp-route-id="@stat.Id" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <form asp-action="CreateStat" method="post" class="row g-2 mt-3">
+            @Html.AntiForgeryToken()
+            <div class="col">
+                <input type="text" class="form-control" name="Value" placeholder="Değer" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Label" placeholder="Etiket" />
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="SortOrder" placeholder="Sıra" value="0" />
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-afakder">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>

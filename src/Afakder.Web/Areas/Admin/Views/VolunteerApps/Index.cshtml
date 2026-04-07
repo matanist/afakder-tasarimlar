@@ -1,0 +1,70 @@
+@model IEnumerable<VolunteerApplication>
+@{
+    ViewData["Title"] = "Gönüllü Başvuruları";
+}
+
+<h4 class="mb-4">Gönüllü Başvuruları</h4>
+
+<div class="card">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th></th>
+                        <th>Ad Soyad</th>
+                        <th>E-posta</th>
+                        <th>Şehir</th>
+                        <th>Tarih</th>
+                        <th class="text-end">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var app in Model)
+                    {
+                        <tr class="@(!app.IsRead ? "table-warning" : "")">
+                            <td class="text-center" style="width: 32px;">
+                                @if (!app.IsRead)
+                                {
+                                    <span class="badge bg-danger" title="Okunmadı">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">
+                                        <i class="bi bi-envelope-open"></i>
+                                    </span>
+                                }
+                            </td>
+                            <td><strong>@app.Name</strong></td>
+                            <td>@app.Email</td>
+                            <td>@app.City</td>
+                            <td>
+                                <span class="small text-muted">@app.SubmittedAt.ToString("dd.MM.yyyy HH:mm")</span>
+                            </td>
+                            <td class="text-end">
+                                <a href="/admin/volunteerapps/detail/@app.Id" class="btn btn-sm btn-outline-primary" title="Detay">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <form method="post" action="/admin/volunteerapps/delete/@app.Id" class="d-inline"
+                                      onsubmit="return confirm('Bu başvuruyu silmek istediğinize emin misiniz?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Sil">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">Henüz başvuru yok.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
