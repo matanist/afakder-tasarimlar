@@ -1,0 +1,647 @@
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-pulse"></div>
+      <p class="preloader-text">umut yükleniyor...</p>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+            <path d="M20 8 L20 32 M12 16 L20 8 L28 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 28 Q20 22 30 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">AFAKDER</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hikaye">Hikayemiz</a></li>
+        <li><a href="#etki">Etkimiz</a></li>
+        <li><a href="#faaliyetler">Ne Yapıyoruz</a></li>
+        <li><a href="#bagis">Bağış</a></li>
+        <li><a href="#gonullu">Gönüllü Ol</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+      <a href="#bagis" class="nav-cta">Destek Ol</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-links">
+        <li><a href="#hikaye">Hikayemiz</a></li>
+        <li><a href="#etki">Etkimiz</a></li>
+        <li><a href="#faaliyetler">Ne Yapıyoruz</a></li>
+        <li><a href="#bagis">Bağış</a></li>
+        <li><a href="#gonullu">Gönüllü Ol</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+      <a href="#bagis" class="mobile-cta">Destek Ol</a>
+    </div>
+  </div>
+
+  <!-- HERO — THE CRISIS -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <!-- Floating ember particles -->
+      <div class="particle" style="--x: 10%; --delay: 0s; --duration: 8s; --size: 4px; --opacity: 0.6;"></div>
+      <div class="particle" style="--x: 20%; --delay: 1.2s; --duration: 10s; --size: 3px; --opacity: 0.4;"></div>
+      <div class="particle" style="--x: 30%; --delay: 0.5s; --duration: 7s; --size: 5px; --opacity: 0.7;"></div>
+      <div class="particle" style="--x: 40%; --delay: 2s; --duration: 9s; --size: 3px; --opacity: 0.5;"></div>
+      <div class="particle" style="--x: 50%; --delay: 0.8s; --duration: 11s; --size: 6px; --opacity: 0.8;"></div>
+      <div class="particle" style="--x: 60%; --delay: 1.5s; --duration: 8s; --size: 4px; --opacity: 0.6;"></div>
+      <div class="particle" style="--x: 70%; --delay: 3s; --duration: 10s; --size: 3px; --opacity: 0.4;"></div>
+      <div class="particle" style="--x: 80%; --delay: 0.3s; --duration: 7s; --size: 5px; --opacity: 0.7;"></div>
+      <div class="particle" style="--x: 90%; --delay: 2.5s; --duration: 9s; --size: 4px; --opacity: 0.5;"></div>
+      <div class="particle" style="--x: 15%; --delay: 1s; --duration: 12s; --size: 3px; --opacity: 0.3;"></div>
+      <div class="particle" style="--x: 25%; --delay: 3.5s; --duration: 8s; --size: 6px; --opacity: 0.6;"></div>
+      <div class="particle" style="--x: 35%; --delay: 0.7s; --duration: 10s; --size: 4px; --opacity: 0.5;"></div>
+      <div class="particle" style="--x: 45%; --delay: 2.2s; --duration: 9s; --size: 3px; --opacity: 0.4;"></div>
+      <div class="particle" style="--x: 55%; --delay: 1.8s; --duration: 7s; --size: 5px; --opacity: 0.7;"></div>
+      <div class="particle" style="--x: 65%; --delay: 0.4s; --duration: 11s; --size: 4px; --opacity: 0.6;"></div>
+      <div class="particle" style="--x: 75%; --delay: 2.8s; --duration: 8s; --size: 3px; --opacity: 0.5;"></div>
+      <div class="particle" style="--x: 85%; --delay: 1.3s; --duration: 10s; --size: 5px; --opacity: 0.4;"></div>
+      <div class="particle" style="--x: 5%; --delay: 3.2s; --duration: 9s; --size: 4px; --opacity: 0.6;"></div>
+      <div class="particle" style="--x: 95%; --delay: 0.6s; --duration: 7s; --size: 6px; --opacity: 0.8;"></div>
+      <div class="particle" style="--x: 48%; --delay: 1.7s; --duration: 12s; --size: 3px; --opacity: 0.3;"></div>
+      <!-- ECG / Heartbeat line -->
+      <div class="ecg-container">
+        <svg class="ecg-line" viewBox="0 0 1200 100" preserveAspectRatio="none">
+          <path class="ecg-path" d="M0,50 L200,50 L220,50 L230,20 L240,80 L250,10 L260,90 L270,50 L290,50 L500,50 L520,50 L530,20 L540,80 L550,10 L560,90 L570,50 L590,50 L800,50 L820,50 L830,20 L840,80 L850,10 L860,90 L870,50 L890,50 L1100,50 L1120,50 L1130,20 L1140,80 L1150,10 L1160,90 L1170,50 L1200,50"/>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title animate-in">Karanlığın İçinde<br><span class="highlight">Bir Işık</span></h1>
+      <p class="hero-subtitle animate-in">Her afet bir karanlık getirir.<br>Biz o karanlıkta <em>umut</em> oluyoruz.</p>
+      <div class="hero-actions animate-in">
+        <a href="#bagis" class="btn btn-primary btn-glow">Hayat Kurtar</a>
+        <a href="#hikaye" class="btn btn-outline">Hikayemizi Oku</a>
+      </div>
+    </div>
+    <div class="stats-ribbon">
+      <div class="stat-item">
+        <span class="stat-number">2.847</span>
+        <span class="stat-label">Kurtarılan Can</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">43</span>
+        <span class="stat-label">Operasyon</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">18</span>
+        <span class="stat-label">İlde Faaliyet</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">156</span>
+        <span class="stat-label">Gönüllü</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HİKAYE — THE RESPONSE -->
+  <section id="hikaye" class="section section-response">
+    <div class="container">
+      <div class="response-header">
+        <span class="section-tag">Her Saniye Hayat</span>
+        <h2 class="mega-number">72 <span class="mega-unit">saat</span></h2>
+        <p class="response-subtitle">Altın saatler. Her saniye bir hayat.<br>Afet sonrası ilk 72 saat, hayatta kalma şansının en yüksek olduğu zamandır.</p>
+      </div>
+      <div class="timeline-cards">
+        <div class="timeline-card" data-animate>
+          <div class="timeline-badge">
+            <span class="timeline-hour">0-24</span>
+            <span class="timeline-label">saat</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Kritik Müdahale</h3>
+            <p>Ekipler sahaya ulaşır. İlk temas, ilk umut. Enkazın altından ilk sesler duyulur. Her saniye altın değerinde.</p>
+            <div class="timeline-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-card" data-animate>
+          <div class="timeline-badge">
+            <span class="timeline-hour">24-48</span>
+            <span class="timeline-label">saat</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Yaşam Mücadelesi</h3>
+            <p>Kurtarma operasyonları yoğunlaşır. Enkaz altındaki insanlara su ve hava ulaştırılır. Umut azalmaz, çaba artar.</p>
+            <div class="timeline-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-card" data-animate>
+          <div class="timeline-badge">
+            <span class="timeline-hour">48-72</span>
+            <span class="timeline-label">saat</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Son Şans</h3>
+            <p>En kritik eşik. İnsan bedeni sınırlarına ulaşır ama mucizeler bu saatlerde gerçekleşir. Vazgeçmek yok.</p>
+            <div class="timeline-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETKİ — THE IMPACT -->
+  <section id="etki" class="section section-impact">
+    <div class="container">
+      <span class="section-tag">Gerçek Hikayeler</span>
+      <h2 class="section-title">Her Rakamın Arkasında<br><span class="highlight">Bir İnsan</span> Var</h2>
+      <p class="section-desc">Bu isimler istatistik değil. Her biri bir anne, bir baba, bir çocuk. Her biri bizim için dünyaya değer.</p>
+
+      <div class="story-grid">
+        <div class="story-card" data-animate>
+          <div class="story-avatar">
+            <div class="avatar-circle avatar-1">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="22" r="10" fill="currentColor" opacity="0.7"/>
+                <ellipse cx="30" cy="45" rx="16" ry="10" fill="currentColor" opacity="0.5"/>
+              </svg>
+            </div>
+            <span class="story-heart">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18l-1.45-1.32C3.4 12.36 0 9.28 0 5.5 0 2.42 2.42 0 5.5 0 7.24 0 8.91.81 10 2.09 11.09.81 12.76 0 14.5 0 17.58 0 20 2.42 20 5.5c0 3.78-3.4 6.86-8.55 11.18L10 18z"/></svg>
+            </span>
+          </div>
+          <div class="story-body">
+            <h3 class="story-name">Ayşe, 8 yaşında</h3>
+            <span class="story-location">Hatay</span>
+            <blockquote class="story-quote">
+              "14 saat sonra enkazdan sağ çıkarıldı. İlk sözü <em>'Annem nerede?'</em> oldu. Bugün annesiyle birlikte yeni hayatına devam ediyor."
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="story-card" data-animate>
+          <div class="story-avatar">
+            <div class="avatar-circle avatar-2">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="22" r="10" fill="currentColor" opacity="0.7"/>
+                <ellipse cx="30" cy="45" rx="16" ry="10" fill="currentColor" opacity="0.5"/>
+              </svg>
+            </div>
+            <span class="story-heart">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18l-1.45-1.32C3.4 12.36 0 9.28 0 5.5 0 2.42 2.42 0 5.5 0 7.24 0 8.91.81 10 2.09 11.09.81 12.76 0 14.5 0 17.58 0 20 2.42 20 5.5c0 3.78-3.4 6.86-8.55 11.18L10 18z"/></svg>
+            </span>
+          </div>
+          <div class="story-body">
+            <h3 class="story-name">Mehmet Amca, 67 yaşında</h3>
+            <span class="story-location">Adıyaman</span>
+            <blockquote class="story-quote">
+              "Komşularıyla birlikte kurtarıldı. <em>'Beni bırakın, önce çocukları çıkarın'</em> diyordu. Hepsini kurtardık. Hepsini."
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="story-card" data-animate>
+          <div class="story-avatar">
+            <div class="avatar-circle avatar-3">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="25" r="8" fill="currentColor" opacity="0.7"/>
+                <ellipse cx="30" cy="43" rx="12" ry="8" fill="currentColor" opacity="0.5"/>
+              </svg>
+            </div>
+            <span class="story-heart">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18l-1.45-1.32C3.4 12.36 0 9.28 0 5.5 0 2.42 2.42 0 5.5 0 7.24 0 8.91.81 10 2.09 11.09.81 12.76 0 14.5 0 17.58 0 20 2.42 20 5.5c0 3.78-3.4 6.86-8.55 11.18L10 18z"/></svg>
+            </span>
+          </div>
+          <div class="story-body">
+            <h3 class="story-name">Elif bebek, 11 aylık</h3>
+            <span class="story-location">Kahramanmaraş</span>
+            <blockquote class="story-quote">
+              "Mucize kurtuluş. 26 saat sonra annesinin kollarında bulundu. Ekibimiz o gün <em>sessizce ağladı</em>. Mutluluktan."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAKAMLAR — THE IMPACT continued -->
+  <section id="rakamlar" class="section section-numbers">
+    <div class="container">
+      <div class="numbers-grid">
+        <div class="number-box" data-animate>
+          <div class="number-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <span class="number-value" data-target="2847">0</span>
+          <span class="number-label">Kurtarılan Can</span>
+        </div>
+        <div class="number-box" data-animate>
+          <div class="number-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <span class="number-value" data-target="156">0</span>
+          <span class="number-label">Gönüllü</span>
+        </div>
+        <div class="number-box" data-animate>
+          <div class="number-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <span class="number-value" data-target="43">0</span>
+          <span class="number-label">Operasyon</span>
+        </div>
+        <div class="number-box" data-animate>
+          <div class="number-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <span class="number-value" data-target="18">0</span>
+          <span class="number-label">İlde Faaliyet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NE YAPIYORUZ — Faaliyetler -->
+  <section id="faaliyetler" class="section section-activities">
+    <div class="container">
+      <span class="section-tag">Uzmanlık Alanlarımız</span>
+      <h2 class="section-title">Ne Yapıyoruz?</h2>
+      <p class="section-desc">Her afetin farklı ihtiyaçları var. Biz her birine hazırız.</p>
+
+      <div class="activities-grid">
+        <div class="activity-card" data-animate>
+          <div class="activity-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="12" r="6"/><path d="M24 18v12"/><path d="M18 24h12"/><path d="M12 36c0-6.63 5.37-12 12-12s12 5.37 12 12"/><path d="M8 44h32"/>
+            </svg>
+          </div>
+          <h3>Arama Kurtarma</h3>
+          <p>Profesyonel eğitimli ekiplerimizle afet bölgelerinde hayat kurtarıyoruz. 7/24 hazırız, her an her yere.</p>
+        </div>
+        <div class="activity-card" data-animate>
+          <div class="activity-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="6" y="10" width="36" height="28" rx="3"/><path d="M6 18h36"/><circle cx="16" cy="28" r="4"/><path d="M28 26h10"/><path d="M28 32h7"/>
+            </svg>
+          </div>
+          <h3>Eğitim</h3>
+          <p>Afet bilinci ve ilk yardım eğitimleri veriyoruz. Toplumu afetlere hazırlıyoruz. Bilgi hayat kurtarır.</p>
+        </div>
+        <div class="activity-card" data-animate>
+          <div class="activity-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="8" y="20" width="16" height="20" rx="2"/><rect x="24" y="12" width="16" height="28" rx="2"/><path d="M14 28h4"/><path d="M14 34h4"/><path d="M30 20h4"/><path d="M30 26h4"/><path d="M30 32h4"/>
+            </svg>
+          </div>
+          <h3>Lojistik</h3>
+          <p>Yardım malzemelerini hızla ve etkin şekilde ihtiyaç sahiplerine ulaştırıyoruz. Koordinasyon hayat kurtarır.</p>
+        </div>
+        <div class="activity-card" data-animate>
+          <div class="activity-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="16" r="8"/><path d="M10 40c0-7.73 6.27-14 14-14s14 6.27 14 14"/><path d="M20.84 12.61a3.5 3.5 0 0 1 6.32 0"/><path d="M24 15v3"/>
+            </svg>
+          </div>
+          <h3>Psikososyal Destek</h3>
+          <p>Afetin görünmeyen yaralarını sarıyoruz. Travma sonrası destek ile kalpleri iyileştiriyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAĞIŞ — YOUR PART -->
+  <section id="bagis" class="section section-donate">
+    <div class="container">
+      <div class="donate-header">
+        <span class="section-tag">Senin Gücün</span>
+        <h2 class="section-title donate-title">Sen Olmasaydın,<br><span class="highlight">Bu Hikayeler Yazılamazdı</span></h2>
+        <p class="section-desc">Her bağışın bir hayata dokunuyor. Küçük ya da büyük, fark etmez. Önemli olan senin de bu hikayenin bir parçası olman.</p>
+      </div>
+
+      <!-- Donation Progress -->
+      <div class="donation-progress-wrapper" data-animate>
+        <div class="progress-header">
+          <h3 class="progress-title">Kış Kampanyası</h3>
+          <span class="progress-target">Hedef: 100.000₺</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" data-progress="73">
+            <div class="progress-fill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <div class="progress-info">
+            <span class="progress-amount">73.000₺ toplandı</span>
+            <span class="progress-percent">%73</span>
+          </div>
+        </div>
+        <p class="progress-note">Hedefe ulaşmamıza çok az kaldı. Sen de katkıda bulun!</p>
+      </div>
+
+      <!-- Toggle -->
+      <div class="donate-toggle">
+        <button class="toggle-btn active" data-type="once">Tek Seferlik</button>
+        <button class="toggle-btn" data-type="aylik">Aylık Bağış</button>
+      </div>
+
+      <!-- Impact Cards -->
+      <div class="impact-grid">
+        <div class="impact-card" data-amount="25" data-animate>
+          <span class="impact-amount">25₺</span>
+          <div class="impact-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 20c0-2 2-4 4-4h8c2 0 4 2 4 4v4H8v-4z"/><circle cx="16" cy="10" r="5"/><path d="M6 28h20"/>
+            </svg>
+          </div>
+          <p class="impact-desc">Bir kurtarma köpeğinin<br><strong>bir günlük maması</strong></p>
+          <button class="impact-btn">Bağış Yap</button>
+        </div>
+        <div class="impact-card" data-amount="50" data-animate>
+          <span class="impact-amount">50₺</span>
+          <div class="impact-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="10" width="24" height="16" rx="2"/><path d="M4 14h24"/><path d="M8 22h6"/>
+            </svg>
+          </div>
+          <p class="impact-desc">Bir aileye<br><strong>sıcak battaniye</strong></p>
+          <button class="impact-btn">Bağış Yap</button>
+        </div>
+        <div class="impact-card" data-amount="100" data-animate>
+          <span class="impact-amount">100₺</span>
+          <div class="impact-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 4v24"/><path d="M8 8l8-4 8 4"/><circle cx="16" cy="20" r="6"/><path d="M13 20h6"/>
+            </svg>
+          </div>
+          <p class="impact-desc">Bir gönüllünün<br><strong>sahaya ulaşım masrafı</strong></p>
+          <button class="impact-btn">Bağış Yap</button>
+        </div>
+        <div class="impact-card featured" data-amount="250" data-animate>
+          <span class="impact-badge">En Çok Tercih Edilen</span>
+          <span class="impact-amount">250₺</span>
+          <div class="impact-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 28L8 8h16l4 20H4z"/><path d="M12 8V4h8v4"/><path d="M10 16h12"/><path d="M10 22h12"/>
+            </svg>
+          </div>
+          <p class="impact-desc">Bir aileye<br><strong>geçici barınak çadırı</strong></p>
+          <button class="impact-btn">Bağış Yap</button>
+        </div>
+        <div class="impact-card" data-amount="500" data-animate>
+          <span class="impact-amount">500₺</span>
+          <div class="impact-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="6" width="20" height="20" rx="3"/><path d="M6 12h20"/><path d="M12 6v20"/><circle cx="22" cy="22" r="5" fill="currentColor" opacity="0.2"/>
+            </svg>
+          </div>
+          <p class="impact-desc">Bir haftalık<br><strong>gıda paketi</strong></p>
+          <button class="impact-btn">Bağış Yap</button>
+        </div>
+        <div class="impact-card" data-amount="1000" data-animate>
+          <span class="impact-amount">1.000₺</span>
+          <div class="impact-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 4L4 12v8l12 8 12-8v-8L16 4z"/><path d="M16 12v8"/><path d="M12 16h8"/>
+            </svg>
+          </div>
+          <p class="impact-desc">Profesyonel<br><strong>arama kurtarma ekipmanı</strong></p>
+          <button class="impact-btn">Bağış Yap</button>
+        </div>
+      </div>
+
+      <p class="donate-note">Her kuruş hayat kurtarır. Bağışlarınız vergiden düşülebilir.</p>
+    </div>
+  </section>
+
+  <!-- GÖNÜLLÜ OL -->
+  <section id="gonullu" class="section section-volunteer">
+    <div class="container">
+      <div class="volunteer-wrapper">
+        <div class="volunteer-info">
+          <span class="section-tag">Ekibimize Katıl</span>
+          <h2 class="section-title">Birlikte<br><span class="highlight">Daha Güçlüyüz</span></h2>
+          <p class="volunteer-desc">Hayat kurtarmak için süper kahraman olmana gerek yok. Sadece iyi bir insan olman yeterli.</p>
+          <ul class="volunteer-benefits">
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              </span>
+              Profesyonel arama kurtarma eğitimi
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              </span>
+              İlk yardım ve afet bilinci sertifikası
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              </span>
+              Hayat kurtaran bir topluluğun parçası ol
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              </span>
+              Kişisel gelişim ve liderlik deneyimi
+            </li>
+          </ul>
+        </div>
+        <div class="volunteer-form-wrapper">
+          <form id="volunteerForm" class="warm-form" novalidate>
+            <h3 class="form-title">Gönüllü Başvurusu</h3>
+            <div class="form-group">
+              <label for="vName">Adınız Soyadınız</label>
+              <input type="text" id="vName" name="name" placeholder="Adınızı yazın..." required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="vEmail">E-posta Adresiniz</label>
+              <input type="email" id="vEmail" name="email" placeholder="ornek@email.com" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="vPhone">Telefon Numaranız</label>
+              <input type="tel" id="vPhone" name="phone" placeholder="05XX XXX XX XX" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="vCity">Şehriniz</label>
+              <input type="text" id="vCity" name="city" placeholder="Hangi şehirdesiniz?" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="vMessage">Neden gönüllü olmak istiyorsunuz?</label>
+              <textarea id="vMessage" name="message" rows="3" placeholder="Birkaç cümle yeterli..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Başvurumu Gönder</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section id="iletisim" class="section section-contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <span class="section-tag">Bize Ulaşın</span>
+          <h2 class="section-title">İletişim</h2>
+          <p class="contact-desc">Sorularınız, önerileriniz veya işbirliği talepleriniz için bize yazın. Her mesajınızı okuyoruz.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Adres</strong>
+                <p>Atatürk Cad. No:42/A<br>Çankaya, Ankara</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Telefon</strong>
+                <p>+90 (312) 555 42 42</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <strong>E-posta</strong>
+                <p>info@afakder.org</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="warm-form" novalidate>
+            <h3 class="form-title">Mesaj Gönderin</h3>
+            <div class="form-group">
+              <label for="cName">Adınız</label>
+              <input type="text" id="cName" name="name" placeholder="Adınızı yazın..." required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="cEmail">E-posta</label>
+              <input type="email" id="cEmail" name="email" placeholder="ornek@email.com" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="cSubject">Konu</label>
+              <input type="text" id="cSubject" name="subject" placeholder="Mesajınızın konusu" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="cMessage">Mesajınız</label>
+              <textarea id="cMessage" name="message" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
+              <span class="form-error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Gönder</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">AFAKDER</span>
+          <p class="footer-tagline">Afet Arama Kurtarma Derneği</p>
+          <p class="footer-motto">"Umut hiç bitmez."</p>
+        </div>
+        <div class="footer-emergency">
+          <div class="emergency-badge">
+            <span class="emergency-number">112</span>
+            <span class="emergency-text">Acil Durum Hattı</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Hızlı Erişim</h4>
+          <ul>
+            <li><a href="#hikaye">Hikayemiz</a></li>
+            <li><a href="#etki">Etkimiz</a></li>
+            <li><a href="#faaliyetler">Ne Yapıyoruz</a></li>
+            <li><a href="#bagis">Bağış Yap</a></li>
+            <li><a href="#gonullu">Gönüllü Ol</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Bizi Takip Edin</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter/X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AFAKDER — Afet Arama Kurtarma Derneği. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+      <h3 class="modal-title"></h3>
+      <p class="modal-text"></p>
+      <button class="btn btn-primary modal-close" onclick="closeModal()">Tamam</button>
+    </div>
+  </div>
+
